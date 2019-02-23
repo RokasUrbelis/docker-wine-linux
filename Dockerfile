@@ -3,7 +3,7 @@
 #Email : Rokas.Yang@gmail.com
 #Blog  : https://blog.linux-code.com
 FROM ubuntu:latest
-MAINTAINER docker-wine(Based on github deepin-wine-ubuntu project)
+MAINTAINER RokasUrbelis(Based on github deepin-wine-ubuntu project)
 
 ADD deepin-wine-ubuntu /root/deepin-wine-ubuntu
 COPY link.sh /root/

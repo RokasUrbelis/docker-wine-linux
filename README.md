@@ -2,10 +2,14 @@
 [![](https://img.shields.io/badge/wine.svg)](https://nmap.org)
 ## 获取并安装
 ```shell
+# Clone this repository
 git clone https://github.com/RokasUrbelis/docker-wine-ubuntu.git
+# Go into the repository
+cd docker-wine-ubuntu
+# Build docker image and run docker container for first time
 bash run.sh
 ``` 
->第一次执行run.sh的时间较长，此时你去外面遛弯都是没问题的
+>因为需要构建docker镜像和克隆deepin-wine-ubuntu，第一次执行run.sh的时间较长，此时你去外面遛弯都是没问题的
 
 
 ***如果你的系统未安装docker，请先执行以下命令安装docker:***

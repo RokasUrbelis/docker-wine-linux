@@ -7,8 +7,10 @@
 ```shell
 # Clone this repository
 git clone https://github.com/RokasUrbelis/docker-wine-ubuntu.git
+
 # Go into the repository
 cd docker-wine-ubuntu
+
 # Build docker image and run docker container for first time
 bash run.sh
 ``` 

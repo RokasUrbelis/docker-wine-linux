@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/wine-2.08-red.svg)](https://winehq.org)
 [![](https://img.shields.io/badge/docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-18.04-orange.svg)](https://www.ubuntu.com)
-[![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
+![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
 ## 获取并安装
 ```shell
 # Clone this repository

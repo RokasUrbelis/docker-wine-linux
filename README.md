@@ -24,10 +24,12 @@ curl -fsSL https://get.docker.io|bash
 ## 运行
 
 ```shell
+# Create docker container
 bash run.sh
 ```
 #### 执行run.sh后会自动创建容器并后台运行，并且会告诉你容器id以及给出相应的命令让你执行,你可以执行它给出的命令来运行应用（默认是运行TIM)，执行格式为:
 ```shell
+# Run application
 source start.sh -i 容器id 应用名
 ```
 >因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞，多运行一两次就正常了。

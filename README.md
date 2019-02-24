@@ -1,4 +1,4 @@
-# docker-wine-ubuntu
+# docker-wine-linux
 [![](https://img.shields.io/badge/wine-2.08-red.svg)](https://winehq.org)
 [![](https://img.shields.io/badge/docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-18.04-orange.svg)](https://www.ubuntu.com)
@@ -6,10 +6,10 @@
 ## 获取并安装
 ```shell
 # Clone this repository
-git clone https://github.com/RokasUrbelis/docker-wine-ubuntu.git
+git clone https://github.com/RokasUrbelis/docker-wine-linux.git
 
 # Go into the repository
-cd docker-wine-ubuntu
+cd docker-wine-linux
 
 # Build docker image and run docker container for first time
 bash run.sh

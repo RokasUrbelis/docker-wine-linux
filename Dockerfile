@@ -22,9 +22,6 @@ RUN \
 
 # Define default command.
 
-RUN echo "\033[32mCloning may take a minute or two, so be patient wait,don't EXIT\033[0m"
-#RUN git clone https://github.com/wszqkzqk/deepin-wine-ubuntu.git
-
 RUN yes|bash /root/deepin-wine-ubuntu/install.sh
 #RUN cd && ln -s /opt/deepin-wine-ubuntu/app/* .
 RUN /bin/bash /root/link.sh && rm -f /root/link.sh

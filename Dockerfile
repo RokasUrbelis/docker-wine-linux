@@ -14,7 +14,7 @@ RUN apt-get update
 RUN apt-get install wget git locales ttf-wqy-zenhei sudo -y
 RUN apt-get clean && apt-get autoclean
 ENV LC_CTYPE=zh_CN.UTF-8 
-    XMODIFIERS="@im=fcit"
+ENV XMODIFIERS="@im=fcit"
 
 RUN \
   locale-gen en_US.UTF-8 zh_CN.UTF-8 \

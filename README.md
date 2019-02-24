@@ -4,6 +4,7 @@
 [![](https://img.shields.io/badge/Ubuntu-18.04-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
 ## 获取并安装
+::fire::
 ```shell
 # Clone this repository
 git clone https://github.com/RokasUrbelis/docker-wine-linux.git

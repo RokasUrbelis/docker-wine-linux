@@ -20,7 +20,7 @@ bash run.sh
 ***如果你的系统未安装docker，请先执行以下命令安装docker:***
 ```shell
 curl -fsSL https://get.docker.com|bash
-### 如果你的系统使用此命令依旧安装不了，请移步至[docker官网](https://docs.docker.com)查看安装文档。
+### 如果你的系统使用此命令依旧安装不了，请移步至docker官网查看安装文档。
 ```
 ****由于docker需要系统要求内核版本至少高于`2.6.32`上，如果内核未达标，请自行编译内核，可参考[此链接](https://blog.linux-code.com/articles/thread-1006.html)****
 ## 运行
@@ -33,8 +33,9 @@ bash run.sh
 ```shell
 # Run application
 source start.sh -i 容器id 应用名
+##执行完此命令可能需要等待5-15秒钟，取决于系统响应速度
 ```
->因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞，多运行一两次就正常了。
+>因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者鼠标无法点击或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞(多运行一两次就正常了)，此时你需要kill掉后台pid或者删除容器，推荐每个wine应用用单独docker运行，而不是集中在一个docker上(即每次运行应用前先运行run.sh)，这样方便管理并且降低崩溃概率。
 
 
 #### 支持的应用有

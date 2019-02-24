@@ -16,3 +16,4 @@ case ${1} in
 		echo ' 			      BaiduNetDisk'
 		echo '			      ThunderSpeed'
 		echo 'Example: source start.sh -i 0af TIM'
+esac

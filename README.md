@@ -19,11 +19,13 @@ bash run.sh
 
 ***如果你的系统未安装docker，请先执行以下命令安装docker:***
 ```shell
-curl -fsSL https://get.docker.io|bash
+curl -fsSL https://get.docker.com|bash
+### 如果你的系统使用此命令依旧安装不了，请移步至docker官网查看安装文档。
 ```
+**** 由于docker需要系统要求内核版本至少高于`2.6.32`上，如果内核未达标，请自行编译内核，可参考[此链接](https://blog.linux-code.com/articles/thread-1006.html) ****
 ## 运行
 
-```shell
+](```shell
 # Create docker container
 bash run.sh
 ```

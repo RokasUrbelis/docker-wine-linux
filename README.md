@@ -3,9 +3,17 @@
 [![](https://img.shields.io/badge/docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-18.04-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
+# 一、项目介绍
+>Deepin-wine　环境的全Linux发行版的移植版（支持所有Linux发行版）
+>使用deepin原版二进制文件，解决依赖问题
+>使用docker作为运行容器，方便管理、删除、卸载、打包、迁移等
+>应用使用过程中传输的文件全部保存在在容器`~/.deep-wine/`的子目录
+>仅供个人研究学习使用,谢绝无版权声明造轮子
+
 # 运行必要条件
 - 操作系统:Linux
 - 应用软件:Docker
+
 ***如果你的系统未安装docker，请先执行以下命令安装docker:***
 ```shell
 curl -fsSL https://get.docker.com|bash

@@ -1,7 +1,8 @@
 # docker-wine-linux
-[![](https://img.shields.io/badge/wine-2.08-red.svg)](https://winehq.org)
+[![](https://img.shields.io/badge/linux-all-green.svg)](https://www.gnu.org)
+[![](https://img.shields.io/badge/deepin-wine-2.08-red.svg)](https://winehq.org)
 [![](https://img.shields.io/badge/docker-18.09-blue.svg)](https://www.docker.com)
-[![](https://img.shields.io/badge/Ubuntu-18.04-orange.svg)](https://www.ubuntu.com)
+[![](https://img.shields.io/badge/Ubuntu-latest-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
 # 一、项目介绍
 >Deepin-wine环境的全Linux发行版的移植版（支持所有Linux发行版）
@@ -56,7 +57,7 @@ source start.sh -i 容器id 应用名
 >应用名必须严格按照脚本指定格式，区分大小写，可执行`bash start.sh --help`查看应用名帮助
 
 #### （３）:bulb:重要提示:
-- 因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者鼠标无法点击或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞(多运行一两次就正常了)，此时你需要kill掉后台pid或者删除容器或者重新执行`bash run.sh`。
+- 因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者鼠标无法点击或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞(多运行一两次就正常了)，此时你需要kill掉后台pid或者删除容器来释放系统资源或者直接重新运行`run.sh`。
 - 推荐每个wine应用使用单独容器运行(即每次运行应用前先运行run.sh)，而不是集中在一个容器上，这样方便管理并且降低崩溃概率。
 
 # 四、支持的应用
@@ -69,7 +70,7 @@ source start.sh -i 容器id 应用名
 - Foxmail
 
 # 五、卸载方法
-- 执行'bash uninstall.sh'即可
+- 执行`bash uninstall.sh`即可
 
 # 六、鸣谢
 #### 项目主要参考[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu)(此项目主要是针对Ubuntu开发)，我只是通过容器与宿主机结合让它能在所有发行版中使用。如果我看的更远一点的话，是因为我站在巨人的肩膀上。

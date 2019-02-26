@@ -3,6 +3,16 @@
 [![](https://img.shields.io/badge/docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-18.04-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
+# 运行必要条件
+- 操作系统:Linux
+- 应用软件:Docker
+***如果你的系统未安装docker，请先执行以下命令安装docker:***
+```shell
+curl -fsSL https://get.docker.com|bash
+# 如果使用此命令依旧安装不了，请移步至docker官网查看安装文档。
+```
+#### 由于docker需要系统要求内核版本至少高于`2.6.32`上，如果内核未达标，请自行编译内核，可参考[此链接](https://blog.linux-code.com/articles/thread-1006.html)
+
 # 获取并安装
 ```shell
 # Clone this repository
@@ -17,12 +27,6 @@ bash run.sh
 >因为需要构建docker镜像和克隆deepin-wine-ubuntu，第一次执行run.sh的时间较长，此时你去外面遛弯都是没问题的
 
 
-***如果你的系统未安装docker，请先执行以下命令安装docker:***
-```shell
-curl -fsSL https://get.docker.com|bash
-### 如果你的系统使用此命令依旧安装不了，请移步至docker官网查看安装文档。
-```
-****由于docker需要系统要求内核版本至少高于`2.6.32`上，如果内核未达标，请自行编译内核，可参考[此链接](https://blog.linux-code.com/articles/thread-1006.html)****
 # 运行
 
 ```shell
@@ -36,7 +40,7 @@ source start.sh -i 容器id 应用名
 ##执行完此命令可能需要等待5-15秒钟，取决于系统响应速度
 ```
 #### :bulb:重要提示:
->因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者鼠标无法点击或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞(多运行一两次就正常了)，此时你需要kill掉后台pid或者删除容器，推荐每个wine应用使用单独容器运行(即每次运行应用前先运行run.sh)，而不是集中在一个容器上，这样方便管理并且降低崩溃概率。
+- 因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者鼠标无法点击或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞(多运行一两次就正常了)，此时你需要kill掉后台pid或者删除容器，推荐每个wine应用使用单独容器运行(即每次运行应用前先运行run.sh)，而不是集中在一个容器上，这样方便管理并且降低崩溃概率。
 
 
 #### :trophy:支持的应用有:
@@ -45,6 +49,15 @@ source start.sh -i 容器id 应用名
 - Wechat
 - 百度网盘
 - 迅雷急速版
+
+####　只测试了以上几个应用，如果你想自定义运行你需要的软件，可以到[阿里云镜像下载](http://mirrors.aliyun.com/deepin/pool/non-free/d/)，然后执行
+```shell
+docker cp your_define.deb 容器id:/path/to/path
+docker exec -ti 容器id /bin/bash
+dpkg -i your_define.deb
+for i in $(ls /opt/deepinwine/apps/);do ln -s /opt/deepinwine/apps/$i/run.sh $(echo $i|awk 'BEGIN{FS="-"}{print "/usr/bin/"$2}');done
+exit
+```
 
 #### 以下是在Debian上的运行截图(其他发行版也都是支持的):
 ##### (百度网盘&TIM)

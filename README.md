@@ -69,15 +69,19 @@ source start.sh -i 容器id 应用名
 - Foxmail
 
 # 五、卸载方法
--　执行'bash uninstall.sh'即可
+- 执行'bash uninstall.sh'即可
 
 # 六、鸣谢
 #### 项目主要参考[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu)(此项目主要是针对Ubuntu开发)，我只是通过容器与宿主机结合让它能在所有发行版中使用。如果我看的更远一点的话，是因为我站在巨人的肩膀上。
   
-    
+# 七、参与贡献
+- Star/Fork本项目
+- 新建 Feat_xxx 分支
+- 提交代码
+- 新建 Pull Request
       
-
-## 以下是在Debian上的运行截图(其他发行版也都是支持的):
+# 八、运行截图 
+#### 以下是在Debian上的运行截图(其他发行版也都是支持的):
 ##### (百度网盘&TIM)
 ![百度网盘&TIM](https://raw.githubusercontent.com/RokasUrbelis/docker-wine-ubuntu/master/screen/screen01.png)
 ##### (迅雷&WeChat)

@@ -1,7 +1,7 @@
 # docker-wine-linux
 [![](https://img.shields.io/badge/Linux-All_DISTORS-green.svg)](https://www.gnu.org)
-[![](https://img.shields.io/badge/wine-2.08-red.svg](https://winehq.org)
-[![](https://img.shields.io/badge/docker-18.09-blue.svg)](https://www.docker.com)
+[![](https://img.shields.io/badge/Deepin_Wine-2.08|THE_BASCI_ENVIRONMENT-red.svg)](https://winehq.org)
+[![](https://img.shields.io/badge/Docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-latest|FOR_DOCKER_IMAGE-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
 # 一、项目介绍

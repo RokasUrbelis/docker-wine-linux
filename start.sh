@@ -12,6 +12,7 @@ function USAGE() {
 		echo ' 			      WeChat'
 		echo ' 			      BaiduNetDisk'
 		echo '			      ThunderSpeed'
+		echo '			      Foxmail'
 		echo 'Example: source start.sh -i 0af TIM'
 }
 APP_LIST=(
@@ -28,10 +29,10 @@ else
 	case ${1} in
 		-i)
 			shift ##ID
-			if { sudo docker ps -a|& grep $1; } &>/dev/null;then
+			if { sudo docker ps -a |& grep $1; } &>/dev/null;then
 				ID=$1
 				shift ##APP
-			        { for i in ${APP_LIST[@]};do echo $i;done |& grep -i "^${1}$"; } &>/dev/null　&&　RUN_APP ${ID} $2 \
+				{ for i in ${APP_LIST[@]};do echo $i;done |& grep -i "^${1}$"; } 2>/dev/null 1>APP &&  RUN_APP ${ID} $(cat APP) \
 				|| echo "Sorry,'$1' not in list"
 			else
 				echo "Sorry,not found docker container id '$1'"
@@ -42,3 +43,4 @@ else
 			;;
 	esac
 fi
+[ -f APP ] && shred -f -u -z APP >/dev/null 2>&1

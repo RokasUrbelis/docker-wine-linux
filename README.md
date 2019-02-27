@@ -1,6 +1,6 @@
 # docker-wine-linux
 [![](https://img.shields.io/badge/Linux-All_distro-green.svg)](https://www.gnu.org)
-[![](https://img.shields.io/badge/deepin-wine-2.08-red.svg)](https://winehq.org)
+[![](https://img.shields.io/badge/deepin_wine-The basic environment|2.08-red.svg)](https://winehq.org)
 [![](https://img.shields.io/badge/docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-latest-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)

@@ -42,16 +42,15 @@ bash run.sh
 
 # 三、运行及使用说明
 
-#### (1)只测试了`QQ/TIM/百度网盘/迅雷极速版/Foxmail`几个应用，如果你想自定义安装你需要的软件，可以到[阿里云镜像下载](http://mirrors.aliyun.com/deepin/pool/non-free/d/)对应deb包，`mv`到`deb`目录，之后再执行`bash run.sh`。
+#### (1):rocket:目前只测试了`QQ/TIM/百度网盘/迅雷极速版/Foxmail`几个应用，如果你想自定义安装你需要的软件，可以到[阿里云镜像下载](http://mirrors.aliyun.com/deepin/pool/non-free/d/)对应deb包，`mv`到`deb`目录，之后再执行`bash run.sh`。
 > 提醒一句，因为那些包是针对deepin开发的，用在Ubuntu镜像，使用过程中出现的任何意外情况都是正常的，不保证全部可以正常使用，除非确实有用的需求，否则不建议使用。我测试的这几个应用是毫无问题的。
 
 #### 如果没有需求请直接执行:
 ```shell
 bash run.sh
 ```
-#### (2)执行run.sh后会自动创建容器并后台运行，并且会告诉你容器id以及给出相应的命令让你执行,你可以执行它给出的命令来运行应用（默认是运行TIM)，执行格式为:
+#### (2):zap:执行run.sh后会自动创建容器并后台运行，并且会告诉你容器id以及给出相应的命令让你执行,你可以执行它给出的命令来运行应用（默认是运行TIM)，执行格式为:
 ```shell
-# Run application
 source start.sh -i 容器id 应用名
 #执行完此命令可能需要等待10-30秒钟，取决于系统响应速度
 ```

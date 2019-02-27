@@ -5,8 +5,7 @@ function UNINSTALL() {
 	       	sudo docker stop $i && sudo docker rm $i
 	done
 	###stop docker container
-	for i in $(sudo docker images> >(awk '$1~/docker-wine-linux/{print $3}')
-)
+	for i in $(sudo docker images> >(awk '$1~/docker-wine-linux/{print $3}'))
 	do 
 		sudo docker rmi $i
 	done

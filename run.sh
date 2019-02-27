@@ -10,7 +10,7 @@ xhost + &>/dev/null
 git clone https://github.com/wszqkzqk/deepin-wine-ubuntu.git
 
 ##########build docker image
-sudo docker build -t docker-wine-linux ./ && sed -i '2,7s/^/#&/g;9,11s/^/#&/g' $0
+sudo docker build -t docker-wine-linux ./ && sed -i '2,7s/^/#&/g;9,13s/^/#&/g' $0
 
 #########create docker container
 mkdir -p $(pwd)/APP_PATH && sudo docker run -d -ti -v $(pwd)/APP_PATH:/root -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY  -e GDK_SCALE -e GDK_DPI_SCALE \

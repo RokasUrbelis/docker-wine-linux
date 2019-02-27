@@ -15,7 +15,7 @@
 
 >仅供个人研究学习使用,谢绝无版权声明造轮子
 
-## 运行必要条件
+## :label:运行必要条件
 - 操作系统:Linux
 - 应用软件:Docker
 
@@ -42,7 +42,7 @@ bash run.sh
 
 # 三、运行及使用说明
 
-#### (1):card_file_box:目前只测试了`QQ/TIM/百度网盘/迅雷极速版/Foxmail`几个应用，如果你想自定义安装你需要的软件，可以到[阿里云镜像下载](http://mirrors.aliyun.com/deepin/pool/non-free/d/)对应deb包，`mv`到`deb`目录，之后再执行`bash run.sh`。
+#### (1):memo:目前只测试了`QQ/TIM/百度网盘/迅雷极速版/Foxmail`几个应用，如果你想自定义安装你需要的软件，可以到[阿里云镜像下载](http://mirrors.aliyun.com/deepin/pool/non-free/d/)对应deb包，`mv`到`deb`目录，之后再执行`bash run.sh`。
 > 提醒一句，因为那些包是针对deepin开发的，用在Ubuntu镜像，使用过程中出现的任何意外情况都是正常的，不保证全部可以正常使用，除非确实有用的需求，否则不建议使用。我测试的这几个应用是毫无问题的。
 
 #### 如果没有需求请直接执行:
@@ -59,7 +59,7 @@ source start.sh -i 容器id 应用名
 #### (3):bulb:重要提示:
 - 因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者鼠标无法点击或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞(多运行一两次就正常了)，此时你需要kill掉后台pid或者删除容器来释放系统资源或者直接重新运行`run.sh`。
 - 推荐每个wine应用使用单独容器运行(即每次运行应用前先运行run.sh)，而不是集中在一个容器上，这样方便管理并且降低崩溃概率。
-#### (4):label:文件路径问题
+#### (4):card_file_box:文件路径问题
 - 执行完`run.sh`后会生成一个`APP_PATH`目录，此文件夹已经映射到了你当前容器的`/root`目录，使用应用过程中传输的文件也全部保存在`APP_PATH`这个文件夹里面,多次运行容器或者应用也不会影响文件存放路径。
 
 # 四、支持的应用
@@ -75,7 +75,7 @@ source start.sh -i 容器id 应用名
 - 执行`bash uninstall.sh`即可
 
 # 六、鸣谢
-#### 项目主要参考[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu)(此项目主要是针对Ubuntu开发)，我只是通过容器与宿主机结合让它能在所有发行版中使用。如果我看的更远一点的话，是因为我站在巨人的肩膀上。
+#### :lock:项目主要参考[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu)(此项目主要是针对Ubuntu开发)，我只是通过容器与宿主机结合让它能在所有发行版中使用。如果我看的更远一点的话，是因为我站在巨人的肩膀上。
   
 # 七、参与贡献
 - Star/Fork本项目

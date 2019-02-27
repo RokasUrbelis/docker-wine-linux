@@ -28,7 +28,7 @@ else
 	case ${1} in
 		-i)
 			shift ##ID
-			if { cat demo.txt|& grep $1; } &>/dev/null;then
+			if { sudo docker ps -a|& grep $1; } &>/dev/null;then
 				ID=$1
 				shift ##APP
 			        { for i in ${APP_LIST[@]};do echo $i;done |& grep -i "^${1}$"; } &>/dev/null　&&　RUN_APP ${ID} $2 \

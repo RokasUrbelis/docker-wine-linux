@@ -7,7 +7,7 @@ function USAGE() {
 		echo 'Usage:'
 		echo '		-i  [Docker container id or name] [APP Name]'
 		echo '		APP Nmae list:'
-		echo '          	      QQ'
+		echo ' 			      QQ'
 		echo ' 			      TIM'
 		echo ' 			      WeChat'
 		echo ' 			      BaiduNetDisk'

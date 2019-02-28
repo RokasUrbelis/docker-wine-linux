@@ -26,18 +26,14 @@ curl -fsSL https://get.docker.com|bash
 ```
 #### 由于docker需要系统要求内核版本至少高于`2.6.32`上，如果内核未达标，请自行编译内核，可参考[此链接](https://blog.linux-code.com/articles/thread-1006.html)
 
-# 二、获取并安装
+# 二、获取
 ```shell
 # Clone this repository
 git clone https://github.com/RokasUrbelis/docker-wine-linux.git
 
 # Go into the repository
 cd docker-wine-linux
-
-# Build docker image and run docker container for first time
-bash run.sh
 ``` 
->因为需要构建docker镜像和克隆deepin-wine-ubuntu，第一次执行run.sh的时间较长，此时你去外面遛弯都是没问题的
 
 
 # 三、运行及使用说明
@@ -49,6 +45,8 @@ bash run.sh
 ```shell
 bash run.sh
 ```
+>因为需要构建docker镜像和克隆deepin-wine-ubuntu，第一次执行run.sh的时间较长，此时你去外面遛弯都是没问题的
+
 #### (2):zap:执行run.sh后会自动创建容器并后台运行，并且会告诉你容器id以及给出相应的命令让你执行,你可以执行它给出的命令来运行应用（默认是运行TIM)，执行格式为:
 ```shell
 source start.sh -i 容器id 应用名

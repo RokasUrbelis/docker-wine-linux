@@ -8,12 +8,13 @@ MAINTAINER RokasUrbelis(Based on github deepin-wine-ubuntu project)
 ADD deepin-wine-ubuntu /root/deepin-wine-ubuntu
 COPY link.sh /root/
 COPY deb/ /root/deepin-wine-ubuntu/
-COPY sources.list /etc/apt/
+#COPY sources.list /etc/apt/
 RUN apt-get update
 
 RUN apt-get install wget git locales ttf-wqy-zenhei sudo -y
 RUN apt-get clean && apt-get autoclean
-ENV LC_CTYPE=zh_CN.UTF-8 
+ENV LC_CTYPE=zh_CN.UTF-8 \
+    XMODIFIERS="@im=fcitx"
 
 RUN \
   locale-gen en_US.UTF-8 zh_CN.UTF-8 \

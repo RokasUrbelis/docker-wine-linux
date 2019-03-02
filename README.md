@@ -1,6 +1,6 @@
 <img src="https://blog.linux-code.com/WINE-logo.png" alt="logo" height="120" align="right" />
 
-# docker-wine-linux
+# Docker wine for all linux distros
 
 [![](https://img.shields.io/badge/Linux-All_DISTORS-green.svg)](https://www.gnu.org)
 [![](https://img.shields.io/badge/Deepin_Wine-2.18|THE_BASCI_ENVIRONMENT-red.svg)](https://winehq.org)

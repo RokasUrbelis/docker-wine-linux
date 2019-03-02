@@ -4,6 +4,8 @@
 [![](https://img.shields.io/badge/Docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-latest|FOR_DOCKER_IMAGE-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
+
+<img src="https://blog.linux-code.com/WINE-logo.png" alt="logo" height="120" align="right" />
 # 一、项目介绍
 >Deepin-wine环境的全Linux发行版的移植版（支持所有Linux发行版）
 

@@ -8,6 +8,8 @@
 [![](https://img.shields.io/badge/Ubuntu-latest|FOR_DOCKER_IMAGE-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-ubuntu.svg?label=Stars&style=social)
 
+![First_image](https://raw.githubusercontent.com/RokasUrbelis/docker-wine-ubuntu/master/screen/screen00.png)
+
 
 # 一、项目介绍
 >Deepin-wine环境的全Linux发行版的移植版（支持所有Linux发行版）
@@ -18,7 +20,7 @@
 
 >应用使用过程中传输的文件全部保存在容器`~/.deep-wine/`的子目录
 
->仅供个人研究学习使用,希望它对你有所帮助，你也可以 fork 或者转载（标注来源）
+>仅供个人研究学习使用，希望它对你有所帮助，你也可以 fork 或者转载（标注来源）
 
 ## :label:运行必要条件
 - 操作系统:Linux
@@ -50,7 +52,7 @@ cd docker-wine-linux
 ```shell
 bash run.sh
 ```
->因为需要构建docker镜像和克隆deepin-wine-ubuntu，第一次执行run.sh的时间较长，此时你去外面遛弯都是没问题的
+>因为需要构建docker镜像和克隆deepin-wine-ubuntu，第一次执行run.sh的时间较长(大概需要２－５分钟，取决于带宽及硬件配置)
 
 #### (2):zap:执行run.sh后会自动创建容器并后台运行，并且会告诉你容器id以及给出相应的命令让你执行,你可以执行它给出的命令来运行应用（默认是运行TIM)，执行格式为:
 ```shell
@@ -61,7 +63,8 @@ source start.sh -i 容器id 应用名
 
 #### (3):bulb:重要提示:
 - 因为wine有时候不稳定，运行完应用后发现登录上去看不到页面或者鼠标无法点击或者出现崩溃的情况都是正常的，因为第一次见到主人，wine很害羞(多运行一两次就正常了)，此时你需要kill掉后台pid或者删除容器来释放系统资源或者直接重新运行`run.sh`。
-- 推荐每个wine应用使用单独容器运行(即每次运行应用前先运行run.sh)，而不是集中在一个容器上，这样方便管理并且降低崩溃概率。
+- 追求稳定的话建议每个wine应用使用单独容器运行(即每次运行应用前先运行run.sh)，而不是集中在一个容器上，这样方便管理并且降低崩溃概率。
+>亲测使用一个容器来运行所有应用也很少出现崩溃的情况，并且系统资源占用也相对前者少(如果不是强迫症，推荐此种方式运行wine应用)
 
 # 四、常见问题
 #### (1):card_file_box:应用使用过程文件传输的路径问题
@@ -103,5 +106,5 @@ source start.sh -i 容器id 应用名
 ![迅雷&WeChat](https://raw.githubusercontent.com/RokasUrbelis/docker-wine-ubuntu/master/screen/screen02.png)
 ##### (3D视图)
 ![3D视图](https://raw.githubusercontent.com/RokasUrbelis/docker-wine-ubuntu/master/screen/screen03.png)
-#### :building_construction:此项目使用[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu)作为基础环境，ubuntu:latest作为docker容器，构建了一套容器上运行应用，并把图形化输出到宿主机的DISPLAY控制器的docker容器，支持所有发行版。
+#### :pencil2:此项目使用[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu)作为基础环境，ubuntu:latest作为docker容器，构建了一套容器上运行应用，并把图形化输出到宿主机的DISPLAY控制器的docker容器，支持所有发行版。
 

@@ -1,11 +1,7 @@
 #!/bin/bash
-if sudo apt-get install x11-xserver-utils -y;then
-	:
-else
-	echo "I can't install x11-xserver-utils,please manual install it!"
-	exit 1
-fi
 xhost + &>/dev/null
+
+echo -n "[\033[32m\033[5m+\033[0m]Cloning speed may be slow, please waitting..."
 
 git clone https://github.com/wszqkzqk/deepin-wine-ubuntu.git
 

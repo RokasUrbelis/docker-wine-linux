@@ -6,7 +6,7 @@
 [![](https://img.shields.io/badge/Deepin_Wine-2.18|THE_BASCI_ENVIRONMENT-red.svg)](https://winehq.org)
 [![](https://img.shields.io/badge/Docker-18.09-blue.svg)](https://www.docker.com)
 [![](https://img.shields.io/badge/Ubuntu-latest|FOR_DOCKER_IMAGE-orange.svg)](https://www.ubuntu.com)
-![](https://img.shields.io/github/stars/Acoustroal/docker-wine-ubuntu.svg?label=Stars&style=social)
+![](https://img.shields.io/github/stars/Acoustroal/docker-wine-linux.svg?label=Stars&style=social)
 
 ![First_image](https://github.com/Acoustroal/docker-wine-linux/blob/master/screen/screen00.png)
 
@@ -99,10 +99,10 @@ source start.sh -i 容器id 应用名
 # 九、运行截图 
 #### :camera_flash:以下是在Debian上的运行截图(其他发行版也都是支持的):
 ##### (百度网盘&TIM)
-![百度网盘&TIM](https://raw.githubusercontent.com/Acoustroal/blob//docker-wine-ubuntu/master/screen/screen01.png)
+![百度网盘&TIM](https://github.com/Acoustroal/docker-wine-linux/blob/master/screen/screen01.png)
 ##### (迅雷&WeChat)
-![迅雷&WeChat](https://raw.githubusercontent.com/Acoustroal/docker-wine-ubuntu/master/screen/screen02.png)
+![迅雷&WeChat](https://github.com/Acoustroal/docker-wine-linux/blob/master/screen/screen02.png)
 ##### (3D视图)
-![3D视图](https://raw.githubusercontent.com/RokasUrbelis/docker-wine-ubuntu/master/screen/screen03.png)
+![3D视图](https://github.com/Acoustroal/docker-wine-linux/blob/master/screen/screen03.png)
 #### :pencil2:此项目使用[deepin-wine-ubuntu](https://github.com/wszqkzqk/deepin-wine-ubuntu)作为基础环境，ubuntu:latest作为docker容器，构建了一套容器上运行应用，并把图形化输出到宿主机的DISPLAY控制器的docker容器，支持所有发行版。
 

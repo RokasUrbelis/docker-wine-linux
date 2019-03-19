@@ -8,7 +8,7 @@
 [![](https://img.shields.io/badge/Ubuntu-latest|FOR_DOCKER_IMAGE-orange.svg)](https://www.ubuntu.com)
 ![](https://img.shields.io/github/stars/Acoustroal/docker-wine-ubuntu.svg?label=Stars&style=social)
 
-![First_image](https://raw.githubusercontent.com/Acoustroal/docker-wine-ubuntu/master/screen/screen00.png)
+![First_image](https://github.com/Acoustroal/docker-wine-linux/blob/master/screen/screen00.png)
 
 
 # 一、项目介绍
@@ -99,7 +99,7 @@ source start.sh -i 容器id 应用名
 # 九、运行截图 
 #### :camera_flash:以下是在Debian上的运行截图(其他发行版也都是支持的):
 ##### (百度网盘&TIM)
-![百度网盘&TIM](https://raw.githubusercontent.com/Acoustroal/docker-wine-ubuntu/master/screen/screen01.png)
+![百度网盘&TIM](https://raw.githubusercontent.com/Acoustroal/blob//docker-wine-ubuntu/master/screen/screen01.png)
 ##### (迅雷&WeChat)
 ![迅雷&WeChat](https://raw.githubusercontent.com/Acoustroal/docker-wine-ubuntu/master/screen/screen02.png)
 ##### (3D视图)

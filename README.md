@@ -2,13 +2,14 @@
 
 # Docker wine for all linux distros
 
-[![](https://img.shields.io/badge/Linux-All_DISTORS-green.svg)](https://www.gnu.org)
+[![](https://img.shields.io/badge/Linux-All_DISTROS-green.svg)](https://www.gnu.org)
 [![](https://img.shields.io/badge/Deepin_Wine-2.18|THE_BASCI_ENVIRONMENT-red.svg)](https://winehq.org)
 [![](https://img.shields.io/badge/Docker-18.09-blue.svg)](https://www.docker.com)
-[![](https://img.shields.io/badge/Ubuntu-latest|FOR_DOCKER_IMAGE-orange.svg)](https://www.ubuntu.com)
-![](https://img.shields.io/github/stars/Acoustroal/docker-wine-linux.svg?label=Stars&style=social)
+[![](https://img.shields.io/badge/Ubuntu-Latest|FOR_DOCKER_IMAGE-orange.svg)](https://www.ubuntu.com)
+![](https://img.shields.io/github/stars/RokasUrbelis/docker-wine-linux.svg?label=Stars&style=social)
 
-![First_image](https://github.com/Acoustroal/docker-wine-linux/blob/master/screen/screen00.png)
+![First_image](https://github.com/RokasUrbelis/docker-wine-linux/blob/master/screen/screen00.png)
+
 
 
 # 一、项目介绍

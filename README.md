@@ -1,5 +1,5 @@
 
-<img src="https://blog.linux-code.com/WINE-logo.png" alt="logo" height="120" align="right" />
+<img src="https://github.com/RokasUrbelis/docker-wine-linux/blob/master/screen/asset/wine.png" alt="logo" height="120" align="right" />
 
 
 # Docker wine for all linux distros

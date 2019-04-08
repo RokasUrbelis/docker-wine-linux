@@ -27,6 +27,10 @@ RUN yes|bash /root/deepin-wine-ubuntu/install.sh
 #RUN cd && ln -s /opt/deepin-wine-ubuntu/app/* .
 RUN /bin/bash /root/link.sh && rm -f /root/link.sh
 RUN rm -rf /root/deepin-wine-ubuntu
-WORKDIR /root
+RUN groupadd -r ubuntu && useradd -r -g ubuntu -G audio,video ubuntu \
+    && mkdir -p /home/ubuntu/Downloads && chown -R ubuntu:ubuntu /home/ubuntu \
+    && usermod -u 1000 ubuntu \
+    && groupmod -g 1000 ubuntu \
 
+USER ubuntu
 CMD ["/bin/bash"]

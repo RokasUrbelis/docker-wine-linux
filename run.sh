@@ -3,8 +3,8 @@ xhost + &>/dev/null
 set -e
 echo -e "[\033[32m\033[5m+\033[0m]Cloning speed may be slow, please waitting..."
 DIR="deepin-wine-ubuntu"
-[ -d $DIR ] && rm -rf $DIR || git clone https://github.com/wszqkzqk/${DIR}.git
-
+[ -d $DIR ] && rm -rf $DIR 
+git clone https://github.com/wszqkzqk/${DIR}.git
 ##########build docker image
 if sudo docker build -t docker-wine-linux ./; then
 	sed -i '4,14s/^/#&/g' $0

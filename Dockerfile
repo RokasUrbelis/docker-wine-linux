@@ -9,6 +9,7 @@ ADD deepin-wine-ubuntu /root/deepin-wine-ubuntu
 COPY link.sh /root/
 COPY deb/ /root/deepin-wine-ubuntu/
 #COPY sources.list /etc/apt/
+RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get update
 
 RUN apt-get install wget git locales ttf-wqy-zenhei sudo -y

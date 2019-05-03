@@ -1,12 +1,13 @@
-#!/bin/bash
-function RUN_APP() {
+#!/usr/bin/bash
+RUN_APP() {
 	sudo docker exec -ti $1 /usr/bin/nohup /bin/bash &>/dev/null $2 &
- }
-function USAGE() {
+}
+
+USAGE() {
 
 		echo 'Usage:'
-		echo '		-i  [Docker container id or name] [APP Name]'
-		echo '		APP Nmae list:'
+		echo '		-i  [Docker Container ID or name] [APP_NAME]'
+		echo '		<APP_NAME> list:'
 		echo ' 			      QQ'
 		echo ' 			      TIM'
 		echo ' 			      WeChat'
@@ -15,6 +16,7 @@ function USAGE() {
 		echo '			      Foxmail'
 		echo 'Example: source start.sh -i 0af TIM'
 }
+
 APP_LIST=(
 QQ
 TIM
@@ -23,19 +25,21 @@ BaiduNetDisk
 ThunderSpeed
 Foxmail
 )
-if [ $# != 3 ];then
+
+if [ $# != 3 ]
+then
 	USAGE
 else 
 	case ${1} in
 		-i)
-			shift ##ID
+			shift # ID
 			if { sudo docker ps -a |& grep $1; } &>/dev/null;then
 				ID=$1
-				shift ##APP
+				shift # APP
 				{ for i in ${APP_LIST[@]};do echo $i;done |& grep -i "^${1}$"; } 2>/dev/null 1>APP &&  RUN_APP ${ID} $(cat APP) \
-				|| echo "Sorry,'$1' not in list"
+				|| echo "ERROR: \"$1\" isn't in this list."> /dev/stderr
 			else
-				echo "Sorry,not found docker container id '$1'"
+				echo "ERROR: Docker Container ID \"$1\" doesn't exist."
 			fi
 			;;
 	 	*)

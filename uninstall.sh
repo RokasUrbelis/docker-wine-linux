@@ -1,30 +1,26 @@
 #!/bin/bash
-function UNINSTALL() {
+UNINSTALL() {
 	for i in $(awk '/docker-wine-linux/{print $1}'< <(sudo docker ps -a))
 	do
 	       	sudo docker stop $i && sudo docker rm $i
 	done
-	###stop docker container
+	# Stop Docker Container
 	for i in $(sudo docker images> >(awk '$1~/docker-wine-linux/{print $3}'))
 	do 
 		sudo docker rmi $i
 	done
-	###remove docker image
-	echo "Unstall done"
+	# Remove docker image
+	echo "Uninstalled."
 }
 
 while :;do
-	read -p "Are you sure uninstalli the project?[Y/N]:"
+	read -p "Are you sure of uninstalling this project? [y/N]:
 	case ${REPLY} in
 		'Y'|'y')
 			      UNINSTALL && exit 0
 			      ;;
-		'N'|'n')
-			      exit 0
-			      ;;
 	        *)
-		        echo 'Input error,please input again!'
-			      continue
+			      exit 0
 			      ;;
 	esac
 done

@@ -5,8 +5,8 @@ function RUN_APP() {
 function USAGE() {
 
 		echo 'Usage:'
-		echo '		-i  [Docker container id or name] [APP Name]'
-		echo '		APP Nmae list:'
+		echo '		-i  [Docker Container ID or Name] [APP Name]'
+		echo '		<APP Name> list:'
 		echo ' 			      QQ'
 		echo ' 			      TIM'
 		echo ' 			      WeChat'
@@ -35,7 +35,8 @@ else
 				{ for i in ${APP_LIST[@]};do echo $i;done |& grep -i "^${1}$"; } 2>/dev/null 1>APP &&  RUN_APP ${ID} $(cat APP) \
 				|| echo "Sorry,'$1' not in list"
 			else
-				echo "Sorry,not found docker container id '$1'"
+				echo "ERROR: Docker Container ID \"$1\" doesn't exist."
+				return 2
 			fi
 			;;
 	 	*)

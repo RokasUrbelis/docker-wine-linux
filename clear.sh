@@ -1,6 +1,8 @@
 #!/bin/bash
-###clear docker container,recommended to execute at least once a month, which can be combined with crontab.
-###the script will clear APP_PATH subfile,if you want,you can back it before clear
+# Empty the docker container.
+# We recommend to clean it at least once a month, this tool can be combined with
+# crontab, which means you don't need to do it manually.
+# This script also will empty APP_PATH subfile, you can backup it before cleaning if you want.
 function CLEAR_CONTAINER() {
 		for i in $(awk '/docker-wine-linux/{print $1}'< <(sudo docker ps -a))
 		do

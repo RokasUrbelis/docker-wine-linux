@@ -78,6 +78,9 @@ source start.sh -i 容器id 应用名
 - 建议至少每个月执行一次(每天执行一次更好)，具体多久执行一次取决于你系统资源是否够用以及开的容器数目是否够多，可配合crontab使用
 - 执行`clear.sh`的时候所有与`docker-wine-linux`镜像有关的容器都将被删除，在此之前请备份好`APP_PATH`目录里面你通过应用传输的重要文件
 
+#### (3):art:图标托盘问题(GNOME桌面)
+- 安装 Gnome Shell 插件：[TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/)
+
 # 五、支持的应用
 #### :trophy:目前支持的应用有(持续更新):
 - [x] QQ

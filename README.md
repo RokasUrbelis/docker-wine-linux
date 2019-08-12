@@ -24,7 +24,7 @@
 >仅供个人研究学习使用，希望它对你有所帮助，你也可以 fork 或者转载（标注来源）
 
 ## :label:运行必要条件
-- 操作系统:Linux
+- 操作系统:GNU/Linux
 - 应用软件:Docker
 
 ***如果你的系统未安装docker，请先执行以下命令安装docker:***
@@ -32,6 +32,14 @@
 curl -fsSL https://get.docker.com|bash
 # 如果使用此命令依旧安装不了，请移步至docker官网查看安装文档。
 ```
+
+***如果你的系统不是x86_64，请先执行以下命令安装multiarch/qemu-user-static:***
+```shell
+docker run --rm --privileged multiarch/qemu-user-static:register --reset
+```
+并修改[Dockerfile](Dockerfile)的`FROM ubuntu:latest`为`FROM multiarch/ubuntu-core:amd64-bionic`或`FROM multiarch/ubuntu-debootstrap:amd64-bionic`
+可参考[此链接](https://hub.docker.com/r/multiarch/qemu-user-static)
+
 #### 由于docker需要系统要求内核版本至少高于`2.6.32`上，如果内核未达标，请自行编译内核，可参考[此链接](https://blog.linux-code.com/articles/thread-1006.html)
 
 # 二、获取

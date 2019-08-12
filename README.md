@@ -37,7 +37,7 @@ curl -fsSL https://get.docker.com|bash
 # 二、获取
 ```shell
 # Clone this repository
-git clone https://github.com/RokasUrbelis/docker-wine-linux.git
+git clone --depth 1 https://github.com/RokasUrbelis/docker-wine-linux.git
 
 # Go into the repository
 cd docker-wine-linux

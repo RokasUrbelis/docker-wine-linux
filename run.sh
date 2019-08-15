@@ -6,7 +6,7 @@ DIR="deepin-wine-ubuntu"
 [ -d $DIR ] && rm -rf $DIR 
 git clone https://github.com/wszqkzqk/${DIR}.git
 ##########build docker image
-if sudo docker build -t docker-wine-linux ./; then
+if docker build -t docker-wine-linux ./; then
 	sed -i '4,14s/^/#&/g' $0
 else
 	printf "build docker image error,exit process\n"
@@ -15,8 +15,8 @@ fi
 #########create docker container
 function CREATE() {
 mkdir -p $(pwd)/APP_PATH
-if sudo docker run -d -ti -v $(pwd)/APP_PATH:/root -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY  -e GDK_SCALE -e GDK_DPI_SCALE \
- --name docker-wine-$RANDOM docker-wine-linux /bin/bash|awk '{print substr($0,1,3)}'|tee docker.id &>/dev/null; then
+if docker run -d -ti -v $(pwd)/APP_PATH:/root -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY  -e GDK_SCALE -e GDK_DPI_SCALE \
+ --name docker-wine docker-wine-linux /bin/bash|awk '{print substr($0,1,3)}'|tee docker.id &>/dev/null; then
 	dockerid=$(cat docker.id)
 	return 0
 else

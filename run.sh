@@ -1,7 +1,7 @@
 #!/bin/bash
 xhost + &>/dev/null
 set -e
-source "/etc/X11/xinit/xinputrc"
+pidof fcitx && XIM=fcitx || XIM=ibus
 if docker build -t docker-wine-linux \
 	--build-arg IM=$XIM \
 	--build-arg USER_NAME=$USER \

@@ -15,6 +15,7 @@ ARG VIDEO_GID=39
 
 COPY link.sh /root/
 COPY deb/ /root/deb/
+COPY sources.list /etc/apt/
 
 RUN groupadd -o -f -g $GID $USER_NAME \
     && groupmod -o -g $AUDIO_GID audio \

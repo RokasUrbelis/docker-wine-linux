@@ -24,8 +24,12 @@ RUN groupadd -o -f -g $GID $USER_NAME \
 RUN cd /root \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get update \
-    && apt-get install wget git locales ttf-wqy-zenhei sudo -y \
-    && apt-get clean && apt-get autoclean \
+    && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get install wget git locales ttf-wqy-zenhei sudo tzdata -y \
+    && apt-get clean \
+    && apt-get autoclean \
+    && ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    && dpkg-reconfigure --frontend noninteractive tzdata \
     && locale-gen en_US.UTF-8 zh_CN.UTF-8 zh_CN.GBK \
     && update-locale LANG=zh_CN.UTF-8 \
     && git clone --depth 1 https://github.com/wszqkzqk/deepin-wine-ubuntu.git \

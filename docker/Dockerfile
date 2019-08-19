@@ -25,7 +25,7 @@ RUN cd /root \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install wget git locales ttf-wqy-zenhei sudo tzdata -y \
+    && apt-get install wget git locales ttf-wqy-zenhei sudo tzdata xdotool -y \
     && apt-get clean \
     && apt-get autoclean \
     && ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \

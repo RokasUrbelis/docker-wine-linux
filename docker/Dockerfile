@@ -26,9 +26,7 @@ RUN cd /root \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get update \
     && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install wget git locales ttf-wqy-zenhei sudo tzdata xdotool -y \
-    && apt-get clean \
-    && apt-get autoclean \
+    && apt-get install wget git locales ttf-wqy-zenhei sudo tzdata xdotool socat -y \
     && ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && dpkg-reconfigure --frontend noninteractive tzdata \
     && locale-gen en_US.UTF-8 zh_CN.UTF-8 zh_CN.GBK \
@@ -39,7 +37,9 @@ RUN cd /root \
     && yes|bash /root/deepin-wine-ubuntu/install.sh \
     && /bin/bash /root/link.sh \
     && rm -f /root/link.sh \
-    && rm -rf /root/deepin-wine-ubuntu
+    && rm -rf /root/deepin-wine-ubuntu \
+    && apt-get clean \
+    && apt-get autoclean
 
 ENV LC_CTYPE=zh_CN.UTF-8 \
     XIM=$IM \

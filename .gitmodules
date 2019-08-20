@@ -1,0 +1,3 @@
+[submodule "contrib/xdg-open-server"]
+	path = contrib/xdg-open-server
+	url = https://github.com/eritpchy/xdg-open-server

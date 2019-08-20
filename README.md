@@ -25,7 +25,7 @@
 
 ## :label:运行必要条件
 - 操作系统:Linux
-- 应用软件:Docker
+- 应用软件:Docker, make, gcc
 
 ***如果你的系统未安装docker，请先执行以下命令安装docker:***
 ```shell
@@ -37,7 +37,7 @@ curl -fsSL https://get.docker.com|bash
 # 二、获取
 ```shell
 # Clone this repository
-git clone https://github.com/RokasUrbelis/docker-wine-linux.git
+git clone --recurse-submodules https://github.com/eritpchy/docker-wine-linux.git
 
 # Go into the repository
 cd docker-wine-linux

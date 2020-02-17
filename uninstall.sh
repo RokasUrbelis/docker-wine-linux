@@ -14,7 +14,7 @@ function UNINSTALL() {
 }
 
 while :;do
-	read -p "Are you sure uninstalli the project?[Y/N]:"
+	read -p "Are you sure uninstall the project?[Y/N]:"
 	case ${REPLY} in
 		'Y'|'y')
 			      UNINSTALL && exit 0

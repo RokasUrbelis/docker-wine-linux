@@ -12,7 +12,7 @@ COPY deb/ /root/deepin-wine-ubuntu/
 RUN rm -rf /var/lib/apt/lists/*
 RUN apt-get update
 
-RUN apt-get install wget git locales ttf-wqy-zenhei sudo -y
+RUN apt-get install wget git locales ttf-wqy-zenhei sudo tzdata -y
 RUN apt-get clean && apt-get autoclean
 ENV LC_CTYPE=zh_CN.UTF-8 \
     XMODIFIERS="@im=fcitx"

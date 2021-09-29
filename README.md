@@ -46,7 +46,7 @@ cd docker-wine-linux
 
 # 三、运行及使用说明
 
-#### (1):memo:目前只测试了`QQ/TIM/百度网盘/迅雷极速版/Foxmail`几个应用，如果你想自定义安装你需要的软件，可以到[阿里云镜像下载](http://mirrors.aliyun.com/deepin/pool/non-free/d/)对应deb包，`mv`到`deb`目录，之后再执行`bash run.sh`。
+#### (1):memo:目前只测试了`QQ/TIM/百度网盘/迅雷极速版/Foxmail`几个应用，如果你想自定义安装你需要的软件，可以到[Deepin软件源下载](http://packages.deepin.com/deepin/pool/non-free/d/)对应deb包，`mv`到`deb`目录，之后再执行`bash run.sh`。
 > 提醒一句，因为那些包是针对deepin开发的，用在Ubuntu镜像，使用过程中出现的任何意外情况都是正常的，不保证全部可以正常使用，除非确实有用的需求，否则不建议使用。我测试的这几个应用是毫无问题的。
 
 #### 如果没有需求请直接执行:
